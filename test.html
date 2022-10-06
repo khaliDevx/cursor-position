@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .container{
+            width: 150px;
+            height: 50px;
+            color: rgb(37, 139, 255);
+            background-color: rgb(248, 248, 248);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px;
+        }
+        #x_y{
+            width: 150px;
+        }
+        #screen{
+            width: 500px;
+            height: 500px;
+        }
+        #hint{
+            font-weight: bold;
+            font-size: large;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="hint">
+            mouse is in:
+        </div>
+        <div id="x_y">
+    
+        </div>
+    </div>
+</body>
+<script>
+    $(document).mousemove(function(e){
+        $('#x_y').html('X =  ' + e.clientX + '   ,   Y =  ' + e.clientY)
+    })
+</script>
+</html>
